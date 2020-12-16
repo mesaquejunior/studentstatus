@@ -8,16 +8,23 @@ class StudentController {
     return res.json(students)
   }
 
+  public async show (req: Request, res: Response): Promise<Response> {
+    const fullra = req.query['fullra'] as string
+    const student = await Student.findOne( { fullRa: fullra } )
+    return res.json(student)
+  }
+
   public async store (req: Request, res: Response): Promise<Response> {
+    
     const data = await Student.create(req.body)
-    const { classId, fullName, raNumber, raDigit, ufRa, bornDate, finalStatus, enrollDestination } = data
+    const { classId, fullName, raNumber, raDigit, ufRa, fullRa, bornDate, finalStatus, enrollDestination } = data
     const student = {
       classId,
       fullName,
       raNumber,
       raDigit,
       ufRa,
-      fullRa: fullRa(raNumber, raDigit, ufRa),
+      fullRa,
       bornDate,
       finalStatus,
       enrollDestination
@@ -27,10 +34,5 @@ class StudentController {
   }
 
 }
-
-function fullRa(raNumber:string,raDigit:string,ufRa:string): String {
-  return `${raNumber}${raDigit}${ufRa}`.toLowerCase()
-}
-
 
 export default new StudentController()
