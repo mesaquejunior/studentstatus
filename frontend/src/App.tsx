@@ -1,10 +1,17 @@
 import React from 'react'
-import Home from './components/Home'
+import Header from './components/Header'
+import Main from './components/Main'
+import Footer from './components/Footer'
+import './components/styles.css'
+import 'materialize-css/dist/css/materialize.min.css'
 
-function App() {
+const App: React.FC = () => {
+
   return (
     <>
-    <Home />
+    <Header title="EE PROFESSORA ANTONIA CARLOTA GOMES"/>
+    <Main />
+    <Footer />
     </>
   );
 }
