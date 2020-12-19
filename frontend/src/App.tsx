@@ -3,13 +3,12 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import './components/styles.css'
-import 'materialize-css/dist/css/materialize.min.css'
 
 const App: React.FC = () => {
 
   return (
     <>
-    <Header title="EE PROFESSORA ANTONIA CARLOTA GOMES"/>
+    <Header title="EE PROFESSORA ANTONIA CARLOTA GOMES" government="Governo do Estado de São Paulo" directorship="Diretoria de Ensino Região de Pindamonhangaba"/>
     <Main />
     <Footer />
     </>
