@@ -109,10 +109,6 @@ body {
 }
 
 
-table th {
-  text-align: right;
-}
-
 .alignCenter {
   width: 100vh;
   display: flex;
@@ -142,6 +138,7 @@ table th {
 input, label {
   display:block;
   text-align: left;
+  font-weight: bold;
 }
 
 .formSearch {
@@ -152,13 +149,55 @@ input, label {
 
 .formButton {
   background: #154295;
-  font-size: 1rem;
+  font-weight: bold;
+  font-size: 0.8rem;
   text-align: center;
   color: white;
   border: none;
   width: 49%;
   height: 50px;
+  line-height: 50px;
+  white-space: nowrap;
   border-radius: 4px;
+  box-shadow: 2px 2px 4px #888888;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+}
+
+.formButton i {
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 2px;
+}
+
+.formButton:hover {
+  background: #1e60d8;
+}
+
+.studentData {
+  margin-top: 2vh;
+  width: 30vw;
+}
+
+.studentData th {
+  text-align: left;
+  background-color: #b5cbf5;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  vertical-align: middle;
+  padding-left: 1vw;
+}
+
+.studentData td {
+  height: 40px;
+  background-color: #f9fbfe;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .footer {
@@ -207,4 +246,24 @@ input, label {
     font-size: 1.5rem;
     margin-top: 10vh;
   }
+
+  .studentData {
+    width: 80vw;
+  }
+}
+
+.space {
+  height: 68px;
+}
+
+.warning {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #ea9999;
+  height: 10vh;
+  font-size: 1.2rem;
+  font-weight: bold;
+
 }
